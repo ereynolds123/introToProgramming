@@ -176,6 +176,16 @@ def main():
     
     #Seventh Period of Hogwards
     def seventhPeriod():
+        #Print message
         print("You have fallen in love. Ask Ginny for a kiss. Roll to see if she lets you.")
-
+        
+        
+        #If probability is greater than 0.7 you kiss Ginny. Otherwise, you get damage
+        if random.random() > 0.7:
+            print("Congratulations, {}! You kissed Ginny!".format(character.getName()))
+            character.gainHealth()
+        else:
+            character.damage()
+    seventhPeriod()
+            
 main()
