@@ -1,0 +1,1 @@
+infile= open("addingCash", "r")
