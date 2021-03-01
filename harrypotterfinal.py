@@ -177,13 +177,13 @@ def main():
             
     sixthPeriod()
     
-    #Seventh Period of Hogwards
+    #Seventh Period of Hogwarts
     def seventhPeriod():
-        #Print message
+        #Print seventh period message
         print("You have fallen in love. Ask Ginny for a kiss. Roll to see if she lets you.")
         breakPoint = input("Hit enter to continue")
         
-        #If probability is greater than 0.7 you kiss Ginny. Otherwise, you get damage
+        #If random number is greater than 0.7 you kiss Ginny. Otherwise, you get damage
         if random.random() > 0.7:
             print("Congratulations, {}! You kissed Ginny!".format(character.getName()))
             character.gainHealth()
@@ -192,5 +192,18 @@ def main():
             character.damage()
             breakPoint = input("Hit enter to continue")
     seventhPeriod()"""
+    
+    #Eigth period of Hogwarts
+    def eigthPeriod():
+        #Print eigth period message
+        print("Time to play quidditch! Roll the dice to see if you catch the Golden Snitch.")
+        breakPoint = input("Hit enter to continue")
+        
+        #If random number is higher than 0.5, you win the Golden Snitch. Otherwise, print failure message
+        if random.random()> 0.5:
+            character.addToInventory("Golden Snitch")
+        else:
+            print("You lost. Draco laughs in your face.")
+    eigthPeriod()
             
 main()
