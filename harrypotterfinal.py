@@ -44,7 +44,8 @@ class Character():
         print("You are healed {}. Your health is now {}".format(self.name, self.health))
     
     def addToInventory(self, itemToAppend):
-        self.inventory.append(itemToAppend) 
+        self.inventory.append(itemToAppend)
+        print("Your inventory is {}.".format(self.inventory))
         
     #Returns what is in the inventory    
     def getInventory(self):
@@ -191,7 +192,7 @@ def main():
         else:
             character.damage()
             breakPoint = input("Hit enter to continue")
-    seventhPeriod()"""
+    seventhPeriod()
     
     #Eigth period of Hogwarts
     def eigthPeriod():
@@ -203,7 +204,18 @@ def main():
         if random.random()> 0.5:
             character.addToInventory("Golden Snitch")
         else:
-            print("You lost. Draco laughs in your face.")
-    eigthPeriod()
-            
+            print("You lost{}. Draco laughs in your face.".format(character.getName()))
+    eigthPeriod()"""
+    
+    #Ninth Period of Hogwarts
+    def ninthPeriod():
+        #Print ninth period message
+        print("Dumblebore tragically dies in a battle with Voldemort. Roll the dice to see if you can take vengeance and win his horcrux.")
+        
+        if random.random() > 0.7:
+            character.addToInventory("Horcrux")
+        else:
+            character.damage()
+        
+    ninthPeriod()
 main()
