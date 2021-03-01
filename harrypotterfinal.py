@@ -162,30 +162,35 @@ def main():
     #Sixth period of Hogwarts
     def sixthPeriod():
         #Print message of triwizard tournament
-        print("{}, you have unluckily been entered into the Triwizard tournament. Roll to see if you defeat the Tournament.")
+        print("{}, you have unluckily been entered into the Triwizard tournament. Roll to see if you defeat the Tournament.".format(character.getName()))
+        breakPoint = input("Hit enter to continue")
         
         #If the random number is greater than 0.3, win the Triwizard Tournament. Add the cup to inventory
         if random.random() > 0.3:
             character.addToInventory("Triwizard Tournament Cup")
-            print("Congratulations! You have defeated the Triwizard Tournament.")
+            print("Congratulations {}! You have defeated the Triwizard Tournament.".format(character.getName()))
+            breakPoint = input("Hit enter to continue")
         #Otherwise, damage to your character   
         else:
             character.damage()
+            breakPoint = input("Hit enter to continue")
             
-    sixthPeriod()"""
+    sixthPeriod()
     
     #Seventh Period of Hogwards
     def seventhPeriod():
         #Print message
         print("You have fallen in love. Ask Ginny for a kiss. Roll to see if she lets you.")
-        
+        breakPoint = input("Hit enter to continue")
         
         #If probability is greater than 0.7 you kiss Ginny. Otherwise, you get damage
         if random.random() > 0.7:
             print("Congratulations, {}! You kissed Ginny!".format(character.getName()))
             character.gainHealth()
+            breakPoint = input("Hit enter to continue")
         else:
             character.damage()
-    seventhPeriod()
+            breakPoint = input("Hit enter to continue")
+    seventhPeriod()"""
             
 main()
